@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>المعهد العالي للتقنيات النفطية . البريقة</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/normlize.css">
+        <link rel="stylesheet" href="assets/css/vegas.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="icon" href="assets/img/logo.png">
+    </head>
+    <body>
+        <!-- strat header -->
+            <div class="header">
+                <div class="intro">
+                    <div class="icona">
+                        <img src="assets/img/logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div id='cssmenu'>
+                  <ul>
+                     <li><a href='#'>عن المعهد</a></li>
+                      <li class='has-sub '><a href='#'>الأقسام</a>
+                        <ul>
+                           <li class='has-sub '><a href='#'>قسم تقنيات النفط</a></li>
+                           <li class='has-sub '><a href='#'>قسم الهندسة الميكانيكية</a></li>
+                           <li class='has-sub '><a href='#'>قسم الهندسة الكهربائية</a></li>
+                           <li class='has-sub '><a href='#'>قسم هندسة اللحام</a></li>
+                           <li class='has-sub '><a href='#'>قسم التحكم الآلي</a></li>
+                        </ul>
+                     </li>
+                     <li><a href='#'>الصحيفة</a></li>
+                     <li class='has-sub '><a href='#'>المكاتب والمراكز</a>
+                        <ul>
+                           <li class='has-sub '><a href='#'>مكتب الجودة</a></li>
+                           <li class='has-sub '><a href='#'>مكتب العلاقات العامة</a></li>
+                           <li class='has-sub '><a href='#'>المكتبة المركزية</a></li>
+                        </ul>
+                     </li>
+                     <li class='active'><a href='index.html'>الرئيسية</a></li>
+                  </ul>
+                </div>
+            </div>
+        <!-- end header -->
+
+        <!-- start body -->
+        <div class="container-fluid">
+            <div class="abouttheun" id="about">
+                <h2 class="ar">المعهد العالي للتقنيات النفطية - البريقة</h2>
+                <h2 class="en">HIGHER INSTITUTE OF OIL TECHNOLOGIES AL-BREGA</h2>
+                <p>
+                    تأسس المعهد العالي للتقنيات النفطية في البريقة لتخريج كوادر متميزة في مجال الصناعات النفطية والهندسية، ويوفر المعهد برامج تدريبية متقدمة تلبي احتياجات قطاع النفط والغاز.
+                </p>
+            </div>
+            <hr>
+            <div class="centers" id="center">
+                <div class="box">
+                    <i class="fa fa-book fa-5x"></i>
+                    <h3><a href="#">المكتبة المركزية</a></h3>
+                    <p>المكتبة توفر مصادر متنوعة من الكتب والمراجع العلمية المتخصصة في مجال الهندسة والتقنيات النفطية.</p>
+                </div>
+                <div class="box">
+                    <i class="fa fa-language fa-5x"></i>
+                    <h3><a href="#">مركز اللغات</a></h3>
+                    <p>مركز اللغات يقدم دورات متخصصة لتطوير المهارات اللغوية للطلاب والمهنيين في قطاع النفط.</p>
+                </div>
+                <div class="box">
+                    <i class="fa fa-briefcase fa-5x"></i>
+                    <h3><a href="#">مكتب الجودة</a></h3>
+                    <p>مكتب الجودة يضمن تقديم التعليم والتدريب بمعايير عالية لضمان جودة الخريجين.</p>
+                </div>
+            </div>
+        </div> 
+
+        <!-- start footer -->
+        <div class="footer">
+            <div class="container">
+                <span>Copyright &copy; <span class="footerkara">المعهد العالي للتقنيات النفطية</span></span>
+                <ul id="contact">
+                    <li><a target="_blank" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- end footer -->
+
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+        <script src="assets/js/vegas.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+        <script type="text/javascript">
+          (function() {
+            emailjs.init("YOUR_USER_ID"); // Higher Institute of Breqa EmailJS
+          })();
+        
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // لمنع إعادة التحميل الافتراضي للصفحة
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+              .then(function() {
+                alert('Message sent successfully!');
+              }, function(error) {
+                alert('Failed to send message: ' + JSON.stringify(error));
+              });
+          });
+        </script>
+        
+    </body>
+</html>
